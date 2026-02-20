@@ -5,6 +5,19 @@
         <link>https://davidbudac.github.io/hlas-releases/appcast.xml</link>
         <description>Hlas app updates</description>
         <language>en</language>
+        <item>
+            <title>Version 1.0.0</title>
+            <pubDate>Fri, 20 Feb 2026 09:53:51 +0000</pubDate>
+            <sparkle:version>1.0.0</sparkle:version>
+            <sparkle:shortVersionString>1.0.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <enclosure
+                url="https://github.com/davidbudac/hlas-releases/releases/download/v1.0.0/Hlas.dmg"
+                type="application/octet-stream"
+                sparkle:edSignature="+6wKXfR5pDBTUflNJT3ZeGZ7dq/qQ6tmnHzbKs6u7f8N9jmR4eHhRxeRJpKTNDxZcgsCbkhXm3MbrpDqlQBfDw=="
+                length="4519180"
+            />
+        </item>
     </channel>
         <item>
             <title>Version 1.0.0</title>
