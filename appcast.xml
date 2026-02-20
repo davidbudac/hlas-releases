@@ -44,5 +44,18 @@
                 length="4614105"
             />
         </item>
+        <item>
+            <title>Version 1.0.4</title>
+            <pubDate>Fri, 20 Feb 2026 10:19:24 +0000</pubDate>
+            <sparkle:version>5</sparkle:version>
+            <sparkle:shortVersionString>1.0.4</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <enclosure
+                url="https://github.com/davidbudac/hlas-releases/releases/download/v1.0.4/Hlas.dmg"
+                type="application/octet-stream"
+                sparkle:edSignature="h0e6Qa5fg5eiSkGSeOPMkuxkJEGJKUXbS7bet+2Wl4U1WpAcQzLplxMitT9CdhbqMvGY9guHRaevL6fLy/wyBw=="
+                length="4566801"
+            />
+        </item>
     </channel>
 </rss>
