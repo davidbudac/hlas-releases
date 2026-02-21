@@ -96,5 +96,18 @@
                 length="4613674"
             />
         </item>
+        <item>
+            <title>Version 1.0.8</title>
+            <pubDate>Sat, 21 Feb 2026 22:45:54 +0000</pubDate>
+            <sparkle:version>9</sparkle:version>
+            <sparkle:shortVersionString>1.0.8</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <enclosure
+                url="https://github.com/davidbudac/hlas-releases/releases/download/v1.0.8/Hlas.dmg"
+                type="application/octet-stream"
+                sparkle:edSignature="rrEae8mza8EpHdE9u89Buzsxnw+roCKrXd2x7iUmllBcO3fyUTs/I/w/nSB+g9r8PdtrIZFN1E1/mfYfiC6LDQ=="
+                length="4622459"
+            />
+        </item>
     </channel>
 </rss>
