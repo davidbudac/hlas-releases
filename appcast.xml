@@ -122,5 +122,18 @@
                 length="4662867"
             />
         </item>
+        <item>
+            <title>Version 1.0.10</title>
+            <pubDate>Mon, 23 Feb 2026 21:42:14 +0000</pubDate>
+            <sparkle:version>11</sparkle:version>
+            <sparkle:shortVersionString>1.0.10</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <enclosure
+                url="https://github.com/davidbudac/hlas-releases/releases/download/v1.0.10/Hlas.dmg"
+                type="application/octet-stream"
+                sparkle:edSignature="dPxRFz0H7Bi7SL/61hmUmqP4AmW5b8L1WjAjYIh74/LX2yO10JQj8onKOlB7DhWfi0ByXIBcjN/I9zldC0goAg=="
+                length="4662221"
+            />
+        </item>
     </channel>
 </rss>
