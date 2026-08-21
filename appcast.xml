@@ -1,22 +1,48 @@
-<?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<?xml version='1.0' encoding='utf-8'?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
     <channel>
         <title>Hlas Updates</title>
         <link>https://davidbudac.github.io/hlas-releases/appcast.xml</link>
         <description>Hlas app updates</description>
         <language>en</language>
         <item>
+            <title>Version 1.5.0</title>
+            <pubDate>Fri, 21 Aug 2026 20:42:16 +0000</pubDate>
+            <description>
+**Dictation**
+- Optional floating on-screen indicator while recording/transcribing, with error feedback (Settings › General › Feedback; off by default)
+- Press Esc to cancel a recording; Cancel button in the popover
+- Optional sound cues (off by default); Launch at Login
+- "Paste again" and tap-to-expand for the last transcript; Copy/Paste Last Transcription and Recording Mode in the menu-bar right-click menu
+- Too-quiet takes now say so instead of silently doing nothing; errors are shown on the menu-bar icon
+
+**Settings &amp; History**
+- Settings reorganised into General, Transcription, Translation, Text, Meetings, Advanced; window keeps its size and position
+- Whisper models show downloaded state and size, can be deleted or re-downloaded
+- History: select, delete (Delete key / context menu), group by day, filter dictation vs meeting, Clear History; "Save transcripts to History" toggle and retention period
+- Personal dictionary is an editable table
+- Onboarding lets you choose Parakeet or Whisper and shows download progress
+
+**Fixes &amp; privacy**
+- Microphone recovers after sleep/wake (wake listener never fired before)
+- Translation can no longer hang the app
+- Dictionary replacements containing `$` or `\` no longer corrupt text; filler-word removal no longer deletes "like"/"actually"
+- Dictation audio is deleted from disk after transcription; transcripts no longer written to the debug log or notifications
+- Clipboard is restored faithfully (images, rich text), transcripts are hidden from clipboard managers, and paste/Enter only fire in the app you dictated from
+- Meeting audio is kept until transcription succeeds, with a Retry button
+- Remote server: no default address, unencrypted-connection warning, more reliable transfer and clearer errors</description>
+            <sparkle:version>19</sparkle:version>
+            <sparkle:shortVersionString>1.5.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://github.com/davidbudac/hlas-releases/releases/download/v1.5.0/Hlas.dmg" type="application/octet-stream" sparkle:edSignature="V1Q/iUVZpJFYlkykxzHBqX5LdX7KqmdHD9KClQDz+I6O9OqhdcIRbrLVIONnWs37aRFJonzxUdw0qFxp+nrwAg==" length="7928062" />
+        </item>
+        <item>
             <title>Version 1.0.2</title>
             <pubDate>Fri, 20 Feb 2026 10:03:12 +0000</pubDate>
             <sparkle:version>3</sparkle:version>
             <sparkle:shortVersionString>1.0.2</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure
-                url="https://github.com/davidbudac/hlas-releases/releases/download/v1.0.2/Hlas.dmg"
-                type="application/octet-stream"
-                sparkle:edSignature="DzH7PizUEdtQmoAsj0YOgpeKj/0MjaKsENlMQz5UD1oggLrSSCttXCooPBunG7tPgFwub07NPl8MHxBSPU46Cg=="
-                length="4540710"
-            />
+            <enclosure url="https://github.com/davidbudac/hlas-releases/releases/download/v1.0.2/Hlas.dmg" type="application/octet-stream" sparkle:edSignature="DzH7PizUEdtQmoAsj0YOgpeKj/0MjaKsENlMQz5UD1oggLrSSCttXCooPBunG7tPgFwub07NPl8MHxBSPU46Cg==" length="4540710" />
         </item>
         <item>
             <title>Version 1.0.3</title>
@@ -24,12 +50,7 @@
             <sparkle:version>4</sparkle:version>
             <sparkle:shortVersionString>1.0.3</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure
-                url="https://github.com/davidbudac/hlas-releases/releases/download/v1.0.3/Hlas.dmg"
-                type="application/octet-stream"
-                sparkle:edSignature="YwQtCVINjzTM/dKagHq0pBgn5xULmr775Tih2P1zuGSEB90wRTT4Vy2TPsSwM89NAHe9h7KePZrQjE3LZXtvBQ=="
-                length="4636288"
-            />
+            <enclosure url="https://github.com/davidbudac/hlas-releases/releases/download/v1.0.3/Hlas.dmg" type="application/octet-stream" sparkle:edSignature="YwQtCVINjzTM/dKagHq0pBgn5xULmr775Tih2P1zuGSEB90wRTT4Vy2TPsSwM89NAHe9h7KePZrQjE3LZXtvBQ==" length="4636288" />
         </item>
         <item>
             <title>Version 1.0.3</title>
@@ -37,12 +58,7 @@
             <sparkle:version>1.0.3</sparkle:version>
             <sparkle:shortVersionString>1.0.3</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure
-                url="https://github.com/davidbudac/hlas-releases/releases/download/v1.0.3/Hlas.dmg"
-                type="application/octet-stream"
-                sparkle:edSignature="fT7Akf/zSz7/ope/1t/0g884d4n07KHdU1JMEC3xwe56ls0RDCqkKUwLbG5lCh+OFl3P8FPbF+CMNwn1S4jIAA=="
-                length="4614105"
-            />
+            <enclosure url="https://github.com/davidbudac/hlas-releases/releases/download/v1.0.3/Hlas.dmg" type="application/octet-stream" sparkle:edSignature="fT7Akf/zSz7/ope/1t/0g884d4n07KHdU1JMEC3xwe56ls0RDCqkKUwLbG5lCh+OFl3P8FPbF+CMNwn1S4jIAA==" length="4614105" />
         </item>
         <item>
             <title>Version 1.0.4</title>
@@ -50,12 +66,7 @@
             <sparkle:version>5</sparkle:version>
             <sparkle:shortVersionString>1.0.4</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure
-                url="https://github.com/davidbudac/hlas-releases/releases/download/v1.0.4/Hlas.dmg"
-                type="application/octet-stream"
-                sparkle:edSignature="h0e6Qa5fg5eiSkGSeOPMkuxkJEGJKUXbS7bet+2Wl4U1WpAcQzLplxMitT9CdhbqMvGY9guHRaevL6fLy/wyBw=="
-                length="4566801"
-            />
+            <enclosure url="https://github.com/davidbudac/hlas-releases/releases/download/v1.0.4/Hlas.dmg" type="application/octet-stream" sparkle:edSignature="h0e6Qa5fg5eiSkGSeOPMkuxkJEGJKUXbS7bet+2Wl4U1WpAcQzLplxMitT9CdhbqMvGY9guHRaevL6fLy/wyBw==" length="4566801" />
         </item>
         <item>
             <title>Version 1.0.5</title>
@@ -63,12 +74,7 @@
             <sparkle:version>6</sparkle:version>
             <sparkle:shortVersionString>1.0.5</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure
-                url="https://github.com/davidbudac/hlas-releases/releases/download/v1.0.5/Hlas.dmg"
-                type="application/octet-stream"
-                sparkle:edSignature="CThtGVK2Hf9RM7+WmLWmuKK8tKtXWo1e1zZL13mwjBF6TPdy7dpO2FT+WSOn3LHQ3inCeAKSHXqVfWqEeDeyDA=="
-                length="4566838"
-            />
+            <enclosure url="https://github.com/davidbudac/hlas-releases/releases/download/v1.0.5/Hlas.dmg" type="application/octet-stream" sparkle:edSignature="CThtGVK2Hf9RM7+WmLWmuKK8tKtXWo1e1zZL13mwjBF6TPdy7dpO2FT+WSOn3LHQ3inCeAKSHXqVfWqEeDeyDA==" length="4566838" />
         </item>
         <item>
             <title>Version 1.0.6</title>
@@ -76,12 +82,7 @@
             <sparkle:version>7</sparkle:version>
             <sparkle:shortVersionString>1.0.6</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure
-                url="https://github.com/davidbudac/hlas-releases/releases/download/v1.0.6/Hlas.dmg"
-                type="application/octet-stream"
-                sparkle:edSignature="+QwRjKrzC8LEYcrUEIRzBfbYYMTBchqT1LV/Qg7cTeYzqGYtHj4rhK36SkqYMkrJBffmLCB9GsRqPTBDZRzLBw=="
-                length="4572116"
-            />
+            <enclosure url="https://github.com/davidbudac/hlas-releases/releases/download/v1.0.6/Hlas.dmg" type="application/octet-stream" sparkle:edSignature="+QwRjKrzC8LEYcrUEIRzBfbYYMTBchqT1LV/Qg7cTeYzqGYtHj4rhK36SkqYMkrJBffmLCB9GsRqPTBDZRzLBw==" length="4572116" />
         </item>
         <item>
             <title>Version 1.0.7</title>
@@ -89,12 +90,7 @@
             <sparkle:version>8</sparkle:version>
             <sparkle:shortVersionString>1.0.7</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure
-                url="https://github.com/davidbudac/hlas-releases/releases/download/v1.0.7/Hlas.dmg"
-                type="application/octet-stream"
-                sparkle:edSignature="NpMuYmxOYMXdCmX7aP0gdsbchthZFHFe1UjqEwhcEfKJ++ek6RsUyLixevkDEO8fZZflO+2R6G0ieEtt0w7IAQ=="
-                length="4613674"
-            />
+            <enclosure url="https://github.com/davidbudac/hlas-releases/releases/download/v1.0.7/Hlas.dmg" type="application/octet-stream" sparkle:edSignature="NpMuYmxOYMXdCmX7aP0gdsbchthZFHFe1UjqEwhcEfKJ++ek6RsUyLixevkDEO8fZZflO+2R6G0ieEtt0w7IAQ==" length="4613674" />
         </item>
         <item>
             <title>Version 1.0.8</title>
@@ -102,12 +98,7 @@
             <sparkle:version>9</sparkle:version>
             <sparkle:shortVersionString>1.0.8</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure
-                url="https://github.com/davidbudac/hlas-releases/releases/download/v1.0.8/Hlas.dmg"
-                type="application/octet-stream"
-                sparkle:edSignature="rrEae8mza8EpHdE9u89Buzsxnw+roCKrXd2x7iUmllBcO3fyUTs/I/w/nSB+g9r8PdtrIZFN1E1/mfYfiC6LDQ=="
-                length="4622459"
-            />
+            <enclosure url="https://github.com/davidbudac/hlas-releases/releases/download/v1.0.8/Hlas.dmg" type="application/octet-stream" sparkle:edSignature="rrEae8mza8EpHdE9u89Buzsxnw+roCKrXd2x7iUmllBcO3fyUTs/I/w/nSB+g9r8PdtrIZFN1E1/mfYfiC6LDQ==" length="4622459" />
         </item>
         <item>
             <title>Version 1.0.9</title>
@@ -115,12 +106,7 @@
             <sparkle:version>10</sparkle:version>
             <sparkle:shortVersionString>1.0.9</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure
-                url="https://github.com/davidbudac/hlas-releases/releases/download/v1.0.9/Hlas.dmg"
-                type="application/octet-stream"
-                sparkle:edSignature="ztVtAzUlA2ytzh3lPz2SkyhPb2ef/cHgGjJdcepPdlY+FM3QcvrMfnj7soJJtm4b94XHCOZ7WQ/E7p4yLzf6AQ=="
-                length="4662867"
-            />
+            <enclosure url="https://github.com/davidbudac/hlas-releases/releases/download/v1.0.9/Hlas.dmg" type="application/octet-stream" sparkle:edSignature="ztVtAzUlA2ytzh3lPz2SkyhPb2ef/cHgGjJdcepPdlY+FM3QcvrMfnj7soJJtm4b94XHCOZ7WQ/E7p4yLzf6AQ==" length="4662867" />
         </item>
         <item>
             <title>Version 1.0.10</title>
@@ -128,12 +114,7 @@
             <sparkle:version>11</sparkle:version>
             <sparkle:shortVersionString>1.0.10</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure
-                url="https://github.com/davidbudac/hlas-releases/releases/download/v1.0.10/Hlas.dmg"
-                type="application/octet-stream"
-                sparkle:edSignature="dPxRFz0H7Bi7SL/61hmUmqP4AmW5b8L1WjAjYIh74/LX2yO10JQj8onKOlB7DhWfi0ByXIBcjN/I9zldC0goAg=="
-                length="4662221"
-            />
+            <enclosure url="https://github.com/davidbudac/hlas-releases/releases/download/v1.0.10/Hlas.dmg" type="application/octet-stream" sparkle:edSignature="dPxRFz0H7Bi7SL/61hmUmqP4AmW5b8L1WjAjYIh74/LX2yO10JQj8onKOlB7DhWfi0ByXIBcjN/I9zldC0goAg==" length="4662221" />
         </item>
         <item>
             <title>Version 1.0.11</title>
@@ -141,12 +122,7 @@
             <sparkle:version>12</sparkle:version>
             <sparkle:shortVersionString>1.0.11</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure
-                url="https://github.com/davidbudac/hlas-releases/releases/download/v1.0.11/Hlas.dmg"
-                type="application/octet-stream"
-                sparkle:edSignature="LSGxKL+rGXCPBsRZhaHGMd9dnjcjaQ5/X8GoLJ+qiLJbSAn+/jURQqtPJYvHit6tzuyekjek6LlaeTPm+sPhAw=="
-                length="4665928"
-            />
+            <enclosure url="https://github.com/davidbudac/hlas-releases/releases/download/v1.0.11/Hlas.dmg" type="application/octet-stream" sparkle:edSignature="LSGxKL+rGXCPBsRZhaHGMd9dnjcjaQ5/X8GoLJ+qiLJbSAn+/jURQqtPJYvHit6tzuyekjek6LlaeTPm+sPhAw==" length="4665928" />
         </item>
         <item>
             <title>Version 1.0.12</title>
@@ -154,12 +130,7 @@
             <sparkle:version>13</sparkle:version>
             <sparkle:shortVersionString>1.0.12</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure
-                url="https://github.com/davidbudac/hlas-releases/releases/download/v1.0.12/Hlas.dmg"
-                type="application/octet-stream"
-                sparkle:edSignature="CaAJbBykJM7IeelQh8LUoajfXu4OXV3QaDaPgywklPkWAkMzZQCtqC1noH/3VYfjYlPCEaFTQ7fyZfTTImJiCA=="
-                length="4665944"
-            />
+            <enclosure url="https://github.com/davidbudac/hlas-releases/releases/download/v1.0.12/Hlas.dmg" type="application/octet-stream" sparkle:edSignature="CaAJbBykJM7IeelQh8LUoajfXu4OXV3QaDaPgywklPkWAkMzZQCtqC1noH/3VYfjYlPCEaFTQ7fyZfTTImJiCA==" length="4665944" />
         </item>
         <item>
             <title>Version 1.1.0</title>
@@ -167,12 +138,7 @@
             <sparkle:version>14</sparkle:version>
             <sparkle:shortVersionString>1.1.0</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure
-                url="https://github.com/davidbudac/hlas-releases/releases/download/v1.1.0/Hlas.dmg"
-                type="application/octet-stream"
-                sparkle:edSignature="PEYc+r4IlHapnpziwvPwTEkuFC9Zuu4jkChEtN7seD+Y2hxxH8VSKzFQ7+TJZX0QX3m0X32WqMGcUqMZu1ZkCA=="
-                length="4774990"
-            />
+            <enclosure url="https://github.com/davidbudac/hlas-releases/releases/download/v1.1.0/Hlas.dmg" type="application/octet-stream" sparkle:edSignature="PEYc+r4IlHapnpziwvPwTEkuFC9Zuu4jkChEtN7seD+Y2hxxH8VSKzFQ7+TJZX0QX3m0X32WqMGcUqMZu1ZkCA==" length="4774990" />
         </item>
         <item>
             <title>Version 1.2.0</title>
@@ -180,12 +146,7 @@
             <sparkle:version>15</sparkle:version>
             <sparkle:shortVersionString>1.2.0</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure
-                url="https://github.com/davidbudac/hlas-releases/releases/download/v1.2.0/Hlas.dmg"
-                type="application/octet-stream"
-                sparkle:edSignature="UVEvWa+CRZfR0nM5X/PbPbn/QWRD54oV7c/CslvooPKiKSBai5seW06aze5KGnJK7hQSIH7zdKZK6RKypPTOCQ=="
-                length="7474252"
-            />
+            <enclosure url="https://github.com/davidbudac/hlas-releases/releases/download/v1.2.0/Hlas.dmg" type="application/octet-stream" sparkle:edSignature="UVEvWa+CRZfR0nM5X/PbPbn/QWRD54oV7c/CslvooPKiKSBai5seW06aze5KGnJK7hQSIH7zdKZK6RKypPTOCQ==" length="7474252" />
         </item>
         <item>
             <title>Version 1.3.0</title>
@@ -193,12 +154,7 @@
             <sparkle:version>16</sparkle:version>
             <sparkle:shortVersionString>1.3.0</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure
-                url="https://github.com/davidbudac/hlas-releases/releases/download/v1.3.0/Hlas.dmg"
-                type="application/octet-stream"
-                sparkle:edSignature="PCpFTk1/b5zDpXn1lf1OHXd7DRrT8nmpqe15eVRoF1d0Oip2L/HYO+yulc7+hCH2M/PEUs8O6s/JmwIsF8RnDg=="
-                length="7518830"
-            />
+            <enclosure url="https://github.com/davidbudac/hlas-releases/releases/download/v1.3.0/Hlas.dmg" type="application/octet-stream" sparkle:edSignature="PCpFTk1/b5zDpXn1lf1OHXd7DRrT8nmpqe15eVRoF1d0Oip2L/HYO+yulc7+hCH2M/PEUs8O6s/JmwIsF8RnDg==" length="7518830" />
         </item>
         <item>
             <title>Version 1.4.0</title>
@@ -206,12 +162,7 @@
             <sparkle:version>17</sparkle:version>
             <sparkle:shortVersionString>1.4.0</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure
-                url="https://github.com/davidbudac/hlas-releases/releases/download/v1.4.0/Hlas.dmg"
-                type="application/octet-stream"
-                sparkle:edSignature="pPWoTs2sArK8SPAzPPmuJviX7xHJyEMay6YULDbJiGKHHxT9ozIvQKXWVuDllQIu+8M6QVwHDlAD39v7QEcvCw=="
-                length="7642424"
-            />
+            <enclosure url="https://github.com/davidbudac/hlas-releases/releases/download/v1.4.0/Hlas.dmg" type="application/octet-stream" sparkle:edSignature="pPWoTs2sArK8SPAzPPmuJviX7xHJyEMay6YULDbJiGKHHxT9ozIvQKXWVuDllQIu+8M6QVwHDlAD39v7QEcvCw==" length="7642424" />
         </item>
         <item>
             <title>Version 1.4.1</title>
@@ -219,12 +170,7 @@
             <sparkle:version>18</sparkle:version>
             <sparkle:shortVersionString>1.4.1</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure
-                url="https://github.com/davidbudac/hlas-releases/releases/download/v1.4.1/Hlas.dmg"
-                type="application/octet-stream"
-                sparkle:edSignature="F/gwbkPJoxoHTYpjMFAQbtNo2i0v9Jid6ECwDen8tpyVDefwloOrvWA2KU/2pW5reGfb5WAD0/Eu9Eccyki9DA=="
-                length="7648480"
-            />
+            <enclosure url="https://github.com/davidbudac/hlas-releases/releases/download/v1.4.1/Hlas.dmg" type="application/octet-stream" sparkle:edSignature="F/gwbkPJoxoHTYpjMFAQbtNo2i0v9Jid6ECwDen8tpyVDefwloOrvWA2KU/2pW5reGfb5WAD0/Eu9Eccyki9DA==" length="7648480" />
         </item>
     </channel>
 </rss>
