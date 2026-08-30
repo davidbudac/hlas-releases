@@ -6,6 +6,24 @@
         <description>Hlas app updates</description>
         <language>en</language>
         <item>
+            <title>Version 1.7.0</title>
+            <pubDate>Sun, 30 Aug 2026 09:08:28 +0000</pubDate>
+            <description>
+**On-screen indicator**
+- The floating recording indicator is now a small translucent orb instead of a wide pill —
+  it shows your input level while recording, a spinner while transcribing, and a checkmark
+  when the text lands.
+- **Drag it anywhere.** Where you leave it is where it comes back, on whichever screen you
+  put it. "Reset indicator position" in Settings › General puts it back at the bottom of the
+  screen.
+- The transcript itself no longer appears in the indicator — it goes where you're typing,
+  which is where you were already looking. Errors still show their message in full.</description>
+            <sparkle:version>22</sparkle:version>
+            <sparkle:shortVersionString>1.7.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://github.com/davidbudac/hlas-releases/releases/download/v1.7.0/Hlas.dmg" type="application/octet-stream" sparkle:edSignature="Ye/o54oG/eK025GZo5U3la2veUYzqp8I7OARpQxa5NEyvffAqzBm82i5P7RcX8kzsTgIprLOc8/TJ2bP1WqLAg==" length="16044418" />
+        </item>
+        <item>
             <title>Version 1.6.1</title>
             <pubDate>Sun, 30 Aug 2026 07:20:47 +0000</pubDate>
             <description>
