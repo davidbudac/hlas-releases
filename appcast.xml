@@ -6,6 +6,22 @@
         <description>Hlas app updates</description>
         <language>en</language>
         <item>
+            <title>Version 1.6.1</title>
+            <pubDate>Sun, 30 Aug 2026 07:20:47 +0000</pubDate>
+            <description>
+**Updates**
+- Hlas now checks for new versions on its own and offers the update when it finds one.
+  Previously it only asked for permission to check on first launch, and did nothing at all
+  if that prompt was declined or dismissed — so updates could be missed indefinitely unless
+  you picked "Check for Updates…" from the menu-bar menu by hand.
+- This fix only takes effect from this version onward: it is the 1.6.1 binary that knows to
+  check, so 1.6.1 is the last update you may need to reach for the menu item to get.</description>
+            <sparkle:version>21</sparkle:version>
+            <sparkle:shortVersionString>1.6.1</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://github.com/davidbudac/hlas-releases/releases/download/v1.6.1/Hlas.dmg" type="application/octet-stream" sparkle:edSignature="b235kulU7sBAyP0VmdvwhRdxJ8ErmwtmPMICzgjxjVrWXsqqrG4Mw0Ira0NRFqfrPOawHJ4vI29drG7PGbbQBQ==" length="16032894" />
+        </item>
+        <item>
             <title>Version 1.6.0</title>
             <pubDate>Sun, 30 Aug 2026 07:08:04 +0000</pubDate>
             <description>
