@@ -6,6 +6,28 @@
         <description>Hlas app updates</description>
         <language>en</language>
         <item>
+            <title>Version 1.6.0</title>
+            <pubDate>Sun, 30 Aug 2026 07:08:04 +0000</pubDate>
+            <description>
+**Text**
+- **AI cleanup** (Settings › Text, off by default) — rewrites the transcript on-device with
+  **"S1-mini" by "Superwhisper"**: fillers removed, self-corrections resolved to what you
+  landed on, punctuation and capitalization applied, and spoken numbers, dates, currency and
+  email addresses written out. Four tones, optional bullet lists, optional email layout.
+  English only; downloads a ~350 MB model on first use and runs entirely on your Mac.
+- Filler-word removal and smart punctuation are disabled while AI cleanup is on — the model
+  does both jobs, and running them together mangles its output. The personal dictionary still
+  applies, before the model sees the text.
+
+**Build**
+- Xcode 26 and the separately-downloadable Metal toolchain
+  (`xcodebuild -downloadComponent MetalToolchain`) are now required.</description>
+            <sparkle:version>20</sparkle:version>
+            <sparkle:shortVersionString>1.6.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://github.com/davidbudac/hlas-releases/releases/download/v1.6.0/Hlas.dmg" type="application/octet-stream" sparkle:edSignature="Tqti46BjaXwf1qiNx4xcY61Ahe4BwT7haJYCcnEVWb0f4ntxi5KWJnzArcAeVf5yjejSC6ow1COyNHU3aRRbAg==" length="16032544" />
+        </item>
+        <item>
             <title>Version 1.5.0</title>
             <pubDate>Fri, 21 Aug 2026 20:42:16 +0000</pubDate>
             <description>
