@@ -6,6 +6,15 @@
         <description>Hlas app updates</description>
         <language>en</language>
         <item>
+            <title>Version 1.7.1</title>
+            <pubDate>Mon, 31 Aug 2026 09:56:39 +0000</pubDate>
+            <description>See GitHub release: https://github.com/davidbudac/hlas-releases/releases/tag/v1.7.1</description>
+            <sparkle:version>23</sparkle:version>
+            <sparkle:shortVersionString>1.7.1</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://github.com/davidbudac/hlas-releases/releases/download/v1.7.1/Hlas.dmg" type="application/octet-stream" sparkle:edSignature="SNCTxe7Ro4UF0r/gjtC5AYBd31aueI4w78QxFtJ88rgwOoj4Ae+jG0ZMs3JtP4Sq9Ea44lXejbNio5b9WuleCQ==" length="16043555" />
+        </item>
+        <item>
             <title>Version 1.7.0</title>
             <pubDate>Sun, 30 Aug 2026 09:08:28 +0000</pubDate>
             <description>
