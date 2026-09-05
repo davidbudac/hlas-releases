@@ -6,6 +6,15 @@
         <description>Hlas app updates</description>
         <language>en</language>
         <item>
+            <title>Version 1.7.2</title>
+            <pubDate>Sat, 05 Sep 2026 19:51:41 +0000</pubDate>
+            <description>- New Fast | Polished switch in the menu bar popover toggles AI cleanup (S1-mini) without opening Settings. Fast gives the raw transcript with no post-processing delay.</description>
+            <sparkle:version>24</sparkle:version>
+            <sparkle:shortVersionString>1.7.2</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://github.com/davidbudac/hlas-releases/releases/download/v1.7.2/Hlas.dmg" type="application/octet-stream" sparkle:edSignature="2DH/pQoXL32fKJ+Uk3jc6qhnFry6Fz4M34VLl/n1mQZzblKLI2b9ijQWbo4quHPnElQ78ziNdoikIPBAujVBBw==" length="16046320" />
+        </item>
+        <item>
             <title>Version 1.7.1</title>
             <pubDate>Mon, 31 Aug 2026 09:56:39 +0000</pubDate>
             <description>See GitHub release: https://github.com/davidbudac/hlas-releases/releases/tag/v1.7.1</description>
