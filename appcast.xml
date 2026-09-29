@@ -6,6 +6,33 @@
         <description>Hlas app updates</description>
         <language>en</language>
         <item>
+            <title>Version 1.8.0</title>
+            <pubDate>Tue, 29 Sep 2026 20:17:15 +0000</pubDate>
+            <description>
+**Meeting speaker labels**
+- Optionally identify speakers in meeting transcripts with an on-device model.
+  Enable "Identify speakers" in Settings &gt; Meetings and download the model (~200 MB).
+  Speaker identification runs locally after transcription.
+- Speakers are numbered in order of appearance. When microphone and system-audio
+  activity clearly distinguish your voice, your turns are labeled "Me".
+- If speaker identification or word alignment fails, Hlas keeps the complete plain
+  transcript. Failed meeting transcriptions can still be retried from the saved audio.
+- Model downloads, deletion, and transcription are coordinated to prevent overlapping
+  model operations.
+
+**Local Parakeet**
+- Updated the local speech engine. Existing Parakeet users need a one-time model
+  download (~470 MB) because the model files and cache location have changed.
+
+**Whisper model loading**
+- Reuse an already downloaded model without checking the old Documents cache,
+  avoiding an unnecessary Documents permission prompt during loading.</description>
+            <sparkle:version>25</sparkle:version>
+            <sparkle:shortVersionString>1.8.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://github.com/davidbudac/hlas-releases/releases/download/v1.8.0/Hlas.dmg" type="application/octet-stream" sparkle:edSignature="lW0eCdxppuGiarof7/8zo4uVriS0LefXC8GIbmizxNCo44yyFYffucZ20mBG+GJaxZtgjIOPXRqGiycRVNhSCg==" length="25710469" />
+        </item>
+        <item>
             <title>Version 1.7.2</title>
             <pubDate>Sat, 05 Sep 2026 19:51:41 +0000</pubDate>
             <description>- New Fast | Polished switch in the menu bar popover toggles AI cleanup (S1-mini) without opening Settings. Fast gives the raw transcript with no post-processing delay.</description>
