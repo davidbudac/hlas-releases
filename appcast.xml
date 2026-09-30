@@ -6,6 +6,36 @@
         <description>Hlas app updates</description>
         <language>en</language>
         <item>
+            <title>Version 1.8.1</title>
+            <pubDate>Wed, 30 Sep 2026 11:27:52 +0000</pubDate>
+            <description>
+**A clearer everyday interface**
+- Redesigned the menu around a prominent Dictate button, a separate meeting action,
+  clearer recording status, and labeled recording and text-output controls.
+- Added a last-transcript card with completion time, expansion, copy and paste actions.
+- Made Settings more compact, with grouped navigation, search and clearer descriptions.
+  Processing location now distinguishes This Mac from Own server.
+- Made the local S1-mini polishing model and its English-only dictation support more visible.
+
+**Guided setup**
+- Added a five-step setup window with saved progress, an animated explanation of the
+  dictation flow, model preparation, optional automatic paste, and real practice dictation.
+- Manual copy and paste remains available without Accessibility access. Practice does
+  not paste text, save history, translate, or apply AI cleanup.
+
+**Feedback and recovery**
+- Refined the recording orb and readable indicator, including the Settings preview.
+- Clarified clipboard fallback, paste requests, translation failures and history-save outcomes.
+  If translation fails, the original text is kept and English polishing is skipped.
+- Improved History with an adaptive list/detail layout, Undo Delete and clearer deletion confirmation.
+- Added a meeting status window with input activity and a visible, cancelable auto-start countdown.
+- Improved keyboard accessibility and support for reduced motion.</description>
+            <sparkle:version>26</sparkle:version>
+            <sparkle:shortVersionString>1.8.1</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://github.com/davidbudac/hlas-releases/releases/download/v1.8.1/Hlas.dmg" type="application/octet-stream" sparkle:edSignature="kK97Yt02Nz7zFBX1onDqSs2teAP2Hd7aC3JSj/Du91VmJKATmfkz6mu1NTvIm3B9A6y/neI5In4xbcoT3QKQCQ==" length="26161979" />
+        </item>
+        <item>
             <title>Version 1.8.0</title>
             <pubDate>Tue, 29 Sep 2026 20:17:15 +0000</pubDate>
             <description>
