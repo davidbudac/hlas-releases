@@ -6,6 +6,21 @@
         <description>Hlas app updates</description>
         <language>en</language>
         <item>
+            <title>Version 1.8.3</title>
+            <pubDate>Sun, 04 Oct 2026 14:45:01 +0000</pubDate>
+            <description>
+- Automatic update checks are on by default and can be turned off in Settings &gt; App.
+  Hlas checks at startup and every hour while running, respecting your saved preference.
+- Failed automatic checks stay silent, including startup configuration failures.
+  Manual checks remain available when automatic checking is off.
+- Available update alerts now have a menu-bar indicator and a versioned right-click
+  menu item, making background alerts easier to find.</description>
+            <sparkle:version>28</sparkle:version>
+            <sparkle:shortVersionString>1.8.3</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://github.com/davidbudac/hlas-releases/releases/download/v1.8.3/Hlas.dmg" type="application/octet-stream" sparkle:edSignature="mitBWG2MzHm4JbENgeXA9B9+Agyl4W/qxVMPRk47VAMINJN3LAQtrLqc02kO/tBmV3BK1wsRjhM6//cb8omUCA==" length="26190724" />
+        </item>
+        <item>
             <title>Version 1.8.2</title>
             <pubDate>Sun, 04 Oct 2026 14:04:44 +0000</pubDate>
             <description>
