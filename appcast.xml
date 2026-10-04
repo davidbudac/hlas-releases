@@ -6,6 +6,35 @@
         <description>Hlas app updates</description>
         <language>en</language>
         <item>
+            <title>Version 1.9.0</title>
+            <pubDate>Sun, 04 Oct 2026 21:07:36 +0000</pubDate>
+            <description>
+**Live meeting notes**
+- Added a meeting window with Notes and Transcript tabs. With notes enabled,
+  drafts refresh about every 30 seconds when the speech engine is available;
+  finishing the meeting generates notes from the complete final transcript.
+- Choose an OpenAI-compatible endpoint and model in **Settings &gt; Meetings &gt; Notes**.
+  Local servers such as LM Studio and compatible external providers are supported,
+  with model discovery, an optional Keychain API key, and provider compatibility options.
+- Notes organize summaries, decisions, actions, and open questions, with original
+  source excerpts for review. Copy or export Markdown from the meeting window or History.
+- Notes are optional and off by default. Meeting audio is transcribed on your Mac;
+  enabling notes sends transcript text to the endpoint you choose. Review generated
+  notes against the transcript before using them as minutes.
+- Failed notes requests preserve the transcript and last successful draft. Final
+  notes are saved with the meeting when History saving is enabled.
+
+**Focused settings**
+- Split Text output into Cleanup, Dictionary, and Translation sections, and Meetings
+  into Recording, Notes, and Reminders.
+- Each category remembers its last section. Search opens the matching section,
+  including advanced notes-provider controls.</description>
+            <sparkle:version>29</sparkle:version>
+            <sparkle:shortVersionString>1.9.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://github.com/davidbudac/hlas-releases/releases/download/v1.9.0/Hlas.dmg" type="application/octet-stream" sparkle:edSignature="jaFBfd3WKgFid0y7upPlH/mZ/4lvwN1YPIhaoeK1QCT+Jji6wpNovk/JRTXV3WlE/DPMVDbc+pmABCyQggPKAQ==" length="26379222" />
+        </item>
+        <item>
             <title>Version 1.8.3</title>
             <pubDate>Sun, 04 Oct 2026 14:45:01 +0000</pubDate>
             <description>
