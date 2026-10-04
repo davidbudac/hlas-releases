@@ -6,6 +6,21 @@
         <description>Hlas app updates</description>
         <language>en</language>
         <item>
+            <title>Version 1.8.2</title>
+            <pubDate>Sun, 04 Oct 2026 14:04:44 +0000</pubDate>
+            <description>
+- Added **Follow focused display** in Settings &gt; Dictation &gt; Feedback, enabled by default.
+  The on-screen indicator follows the active window's display while visible, carrying
+  its dragged position across displays. If window focus is unavailable, it uses the
+  pointer's display. Turn the setting off to keep the indicator at its saved position.
+- Recording failure messages now disappear after three seconds instead of ten,
+  followed by the existing short fade.</description>
+            <sparkle:version>27</sparkle:version>
+            <sparkle:shortVersionString>1.8.2</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://github.com/davidbudac/hlas-releases/releases/download/v1.8.2/Hlas.dmg" type="application/octet-stream" sparkle:edSignature="4AX7V1/lkTftrb6zpeBo2GqUvQWNezK6BuEnVdexYu45QYDklIkr2+QmK8zpxS5OSN/EsCD7P9HcqMEFX0ePBg==" length="26169453" />
+        </item>
+        <item>
             <title>Version 1.8.1</title>
             <pubDate>Wed, 30 Sep 2026 11:27:52 +0000</pubDate>
             <description>
