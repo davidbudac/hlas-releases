@@ -6,6 +6,25 @@
         <description>Hlas app updates</description>
         <language>en</language>
         <item>
+            <title>Version 1.9.1</title>
+            <pubDate>Sun, 18 Oct 2026 19:05:25 +0000</pubDate>
+            <description>
+- Added a live memory meter in **Settings &gt; Speech models**, with Hlas's total
+  memory use, a recent-usage graph, and estimates for loaded speech, cleanup,
+  and speaker-label models. The meter updates once a second while the pane is open.
+- Model estimates follow loading, first use, switching, and unloading. When a
+  model's memory cannot be separated from the rest of Hlas, it shows **No estimate**;
+  the total still includes it. Search settings for "memory" to find the meter.
+- Fixed a cleanup-model loading race when cleanup is turned off and immediately
+  enabled again, preventing a canceled load from overwriting the current state.
+- Marked Parakeet as the recommended speech engine for supported languages in
+  Settings and setup.</description>
+            <sparkle:version>30</sparkle:version>
+            <sparkle:shortVersionString>1.9.1</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://github.com/davidbudac/hlas-releases/releases/download/v1.9.1/Hlas.dmg" type="application/octet-stream" sparkle:edSignature="QAQODgXGdsd1arCsY/i83UnavAjwizrBTsFMpQPVOPaRnV8q2VAucU90w2bmORlfrEo6oktbpvo7bwOdA752CQ==" length="26457063" />
+        </item>
+        <item>
             <title>Version 1.9.0</title>
             <pubDate>Sun, 04 Oct 2026 21:07:36 +0000</pubDate>
             <description>
