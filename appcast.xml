@@ -6,6 +6,48 @@
         <description>Hlas app updates</description>
         <language>en</language>
         <item>
+            <title>Version 1.10.0</title>
+            <pubDate>Wed, 21 Oct 2026 16:26:11 +0000</pubDate>
+            <description>
+**Bark 3.0 speech recognition**
+- Added Bark 3.0 (Underdog Bark, by Conway Research) as a local speech engine in
+  **Settings &gt; Speech models**, next to Parakeet and Whisper. It runs entirely on this
+  Mac and needs macOS 15 or later; on macOS 14 it is shown as unavailable.
+- Bark understands English only. Other languages come out as wrong text rather than an
+  error, so Hlas warns when your language is not English and offers a one-click
+  "Set language to English".
+- Two versions: Bark 3.0 Plus (about 200 MB, the default) and Bark 3.0 Pro (about
+  1.2 GB, most accurate). The pane shows each version's published English word error
+  rate (4.76% and 4.29%). These are the model authors' benchmark figures, not
+  measurements from Hlas.
+- The first load prepares the model for your Mac and can take a few minutes. Bark
+  writes every word, including "um" and "uh"; turn on Remove filler words or AI
+  cleanup in **Settings &gt; Text output** to drop them.
+- Works with AI cleanup, translation out of English, meetings, and meeting speaker
+  labels. Audio never leaves this Mac.
+
+**Know each engine's limits**
+- **Settings &gt; Speech models** now lists what each engine supports and where it falls
+  short (languages, translation, size, meetings, speed), including for Own server.
+  The Language section explains how language selection works for the engine you chose.
+
+**Downloaded model storage**
+- Added a Downloaded models section in **Settings &gt; Speech models** that lists every
+  Parakeet, Whisper, and Bark model on disk with its size and a total. Download a
+  Parakeet or Whisper model without switching to it, or delete any you no longer use.
+- The model currently in use is marked and cannot be deleted; switch engines first.
+  A leftover Parakeet cache from an earlier version appears here too, so you can
+  reclaim its space.
+
+**Other**
+- Updated the speech runtime (FluidAudio) to 0.17.7. The Parakeet model location is
+  unchanged, so there is no re-download.</description>
+            <sparkle:version>31</sparkle:version>
+            <sparkle:shortVersionString>1.10.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://github.com/davidbudac/hlas-releases/releases/download/v1.10.0/Hlas.dmg" type="application/octet-stream" sparkle:edSignature="6eJO/rJ1cJQnCilUMrR7jY/IUjmchaH+JDfik4Sgd90gKD5DbmC97VRqgwppewwDkxxFeG//QCrmeAnTTyKXDw==" length="26850286" />
+        </item>
+        <item>
             <title>Version 1.9.1</title>
             <pubDate>Sun, 18 Oct 2026 19:05:25 +0000</pubDate>
             <description>
