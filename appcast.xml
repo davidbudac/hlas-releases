@@ -6,6 +6,21 @@
         <description>Hlas app updates</description>
         <language>en</language>
         <item>
+            <title>Version 1.10.1</title>
+            <pubDate>Wed, 21 Oct 2026 16:41:50 +0000</pubDate>
+            <description>
+- Setup now offers Bark as a speech model. Open **Other speech models** in the
+  speech-model step and choose **Bark · English only**, then pick Plus (about 200 MB)
+  or Pro (about 1.2 GB). The download starts when you click Prepare.
+- If the language you chose earlier in setup is not English, setup warns that Bark
+  only understands English and offers **Set language to English**.
+- On macOS 14, setup explains that Bark requires macOS 15.</description>
+            <sparkle:version>32</sparkle:version>
+            <sparkle:shortVersionString>1.10.1</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://github.com/davidbudac/hlas-releases/releases/download/v1.10.1/Hlas.dmg" type="application/octet-stream" sparkle:edSignature="c3rehQN1m6toit9DhkUyokgvh6Kl2iiz6DcOQL+so/7TykDPCQ7vtjymx3eh0uaNDeT8+CVP54X0n5if1wNaDA==" length="26862357" />
+        </item>
+        <item>
             <title>Version 1.10.0</title>
             <pubDate>Wed, 21 Oct 2026 16:26:11 +0000</pubDate>
             <description>
