@@ -6,6 +6,21 @@
         <description>Hlas app updates</description>
         <language>en</language>
         <item>
+            <title>Version 1.11.1</title>
+            <pubDate>Thu, 22 Oct 2026 20:51:48 +0000</pubDate>
+            <description>
+**Fixes**
+- **The microphone is released when Settings closes.** The input level meter under
+  Settings › Dictation › Microphone and Meetings › Recording kept the microphone open after
+  the Settings window was closed, so macOS showed it as in use while nothing was being
+  recorded. The meter now runs only while its window is visible, and stops when the window
+  is closed, minimized or covered.</description>
+            <sparkle:version>34</sparkle:version>
+            <sparkle:shortVersionString>1.11.1</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://github.com/davidbudac/hlas-releases/releases/download/v1.11.1/Hlas.dmg" type="application/octet-stream" sparkle:edSignature="+DERVl7tvVuiczkThmGxd6y6TEycevj4tFK+Z77A/b1UAuOXTnNyoR7ws42wxESihJYUwZHWEsc3bYhqbhHTCQ==" length="28478575" />
+        </item>
+        <item>
             <title>Version 1.11.0</title>
             <pubDate>Thu, 22 Oct 2026 15:56:45 +0000</pubDate>
             <description>
