@@ -6,6 +6,207 @@
         <description>Hlas app updates</description>
         <language>en</language>
         <item>
+            <title>Version 1.11.0</title>
+            <pubDate>Thu, 22 Oct 2026 15:56:45 +0000</pubDate>
+            <description>
+**Dictation**
+- **Choose the microphone.** Settings › Dictation has a new **Microphone** section and
+  Settings › Meetings › Recording a **Meeting microphone** picker: the system default or a
+  specific input device, each with a live input level meter while the pane is open, so
+  dictation and meetings can use different microphones (also offered in setup's microphone
+  step). Recording now uses an AVAudioEngine recorder that writes the same 16 kHz WAV as
+  before, so live text and live meeting notes work unchanged. If the chosen microphone is
+  not connected, Hlas records with the system default and says so in the popover. If the
+  microphone disappears or changes format mid-dictation, the take stops with "Microphone
+  changed; try again" instead of transcribing a cut-off recording, and the next take uses
+  the default; in a meeting the microphone track stops there and the meeting continues. The
+  previous recorder stays available for one release as a hidden setting
+  (`defaults write com.hlas.app useLegacyRecorder -bool YES`, then a switch in Advanced).
+- **Live text while recording.** Settings › Dictation › Feedback has **Show live text while
+  recording** (off by default; needs the on-screen indicator). With Parakeet or Bark loaded,
+  the indicator pill shows the last two lines of what you are saying while you speak (the
+  orb widens into a pill for it), and the popover's recording view shows the whole running
+  text. Hlas re-transcribes the last 45 seconds about once a second, skips seconds that
+  are silent, and applies your text rules to what it shows. The final text is still
+  transcribed from the complete recording when you stop, so results are unchanged; stopping
+  waits for a pass that is already running. Whisper is not supported (too slow per pass),
+  and Speech models lists the feature under each engine.
+- **AI cleanup for other languages via your server.** Settings › Text output › Cleanup has
+  a new **Other languages** group: **Clean up other languages with my meeting-notes server**
+  (off by default) sends Czech, German or any other non-English dictation to the
+  OpenAI-compatible endpoint set up under Meetings › Notes, with the same cleanup contract as
+  S1-mini (fillers, self-corrections, punctuation, tone, bullet lists, email layout) and a
+  reply in the dictation's language. **Also use it for English instead of S1-mini** sends
+  English there too. Requests use temperature 0 and a 20-second limit; any failure (no
+  server, HTTP error, timeout, implausible reply) keeps the text as dictated. Redaction from
+  Meetings › Notes › Privacy applies. The language is that of the final text, so a
+  dictation translated into Czech goes to the server. **Polish as…** on the last take
+  follows the same rule. The on-screen indicator now reads "Cleaning up text", and the
+  popover's text-output info mentions server cleanup when it is on. The toggles stay
+  disabled until a notes base URL and model are saved.
+- **Spoken commands and snippets** in **Settings &gt; Text output &gt; Dictionary**. Turn on
+  **Spoken commands** (off by default, dictation only) and say "comma", "period", "question
+  mark", "exclamation mark", "colon", "semicolon", "new line", "new paragraph", "open quote" /
+  "close quote", "open parenthesis" / "close parenthesis", "dash" or "scratch that" (deletes
+  the last sentence of the take) to get the punctuation or line break instead of the word;
+  Czech has "čárka", "tečka", "otazník", "vykřičník", "dvojtečka", "středník", "nový řádek",
+  "nový odstavec", "pomlčka" and "škrtni to". The phrase list for your language is shown in
+  Settings, and presets can switch the commands on or off. **Snippets** map a trigger phrase
+  ("insert signature") to a multi-line text that is typed in verbatim, untouched by filler
+  removal, smart punctuation and the dictionary; a snippet beats a dictionary entry with the
+  same words. Smart punctuation now keeps line breaks and capitalizes the first word of each
+  line.
+- The right-click menu has quick switches after **Recording Mode**: **Language** (your
+  three most recent languages, Auto-detect and **Other…**, which opens the language
+  setting; Parakeet shows "detected automatically", Bark "English only", and your own
+  server hides it), a **Translate to &lt;language&gt;** checkbox, an **AI cleanup** checkbox, and
+  **Paste Recent**, a submenu of your last five dictations that pastes the one you pick
+  into the app you right-clicked from. Paste Recent is hidden when history saving is off.
+- The popover's last dictation has a new **More** menu (the ⋯ button on the transcript
+  card): **Transcribe again with…** another engine whose model is downloaded (or your own
+  server), **Polish as…** Casual, Semi-casual, Semi-formal, Formal or plain text,
+  **Translate to…** one of your three most recent target languages (macOS 15+), and
+  **Edit…**, which turns the card into a text area with **Save &amp; Paste** (⌘↩), **Save** and
+  **Cancel** (Esc). Right-click a word while editing and choose **Add to dictionary…** to
+  teach Hlas the right spelling; saving turns the personal dictionary on if it was off.
+  Every change updates the same History record instead of adding a new one, and History
+  can now edit dictation records too. To make this possible Hlas keeps the last recording
+  in memory (never on disk) for 10 minutes or until the next dictation; turn **Keep the
+  last recording so you can retry it** off in **Settings &gt; Privacy &amp; permissions** to
+  drop it right away. Takes longer than 5 minutes keep their text only.
+- New **Insert text by** option in **Settings &gt; Dictation**: **Pasting** (default, as
+  before) or **Typing keystrokes**. Typing sends the text key by key instead of pressing
+  Cmd-V, so it works where pasting is blocked (terminals, remote desktops, password
+  fields, some Electron inputs) and never touches your clipboard. It is slower for long
+  text. If you switch to another app while Hlas is typing, it stops and leaves the full
+  transcript on the clipboard.
+- New **Give Whisper these words as hints** option in **Settings &gt; Text output &gt;
+  Dictionary** (off by default). With the personal dictionary on, Whisper is shown your
+  dictionary's replacement words before transcribing, so names such as "Hlas" are spelled
+  right instead of being corrected afterwards. Whisper only; Parakeet and Bark cannot take
+  hints and still rely on the dictionary replacements. Each hinted take costs one extra
+  short decoder pass.
+
+**Presets and triggers**
+- Dictation presets. **Settings &gt; Dictation &gt; Presets** lets you save named sets of
+  changes for one dictation: recording mode, language (Whisper only), translation, AI
+  cleanup with its tone, bullet lists and email layout, filler-word removal, smart
+  punctuation, the personal dictionary, paste automatically, press Return after pasting and
+  **Insert text by**. Each setting is **Default** (your global setting) or a fixed value. Give
+  a preset its own shortcut, and it appears under **Preset shortcuts** in the popover; the
+  popover reads "Listening · &lt;preset&gt;" while it records. The new **Apps** section applies a
+  preset automatically when you dictate into a chosen app, and a preset's own shortcut still
+  wins over the app's preset, setting by setting. Retrying the last take repeats the
+  settings it was dictated with. Deleting a preset removes its shortcut and its app rules,
+  and a shortcut that is already taken by the recording shortcut, the meeting shortcut or
+  another preset is refused.
+- The **Fn / Globe key** and a **mouse button** can start dictation too. Under the shortcut in
+  **Settings &gt; Dictation**, turn on **Fn / Globe key** and/or record a mouse button (click
+  **Click to record…**, then press a side button; left, right and middle click are refused).
+  Both follow the recording mode: hold and release, or press to start and press again to
+  finish. Fn combinations such as Fn+F5 or Fn+arrow keep working and never start a
+  dictation. The chosen mouse button no longer reaches other apps, so a browser doesn't also
+  go Back; other buttons are untouched. If macOS uses the Globe key for Emoji &amp; Symbols or
+  Dictation, the pane says so and opens Keyboard Settings, and a permission row appears if
+  Accessibility or Input Monitoring is missing. While one of them records, the popover and
+  the indicator say "Release the key or button" instead of naming the shortcut.
+
+**Meetings**
+- Meetings can be paused. While a meeting records, the pause button next to **Finish
+  meeting** in the popover, **Pause** in the meeting window and **Pause Meeting Recording**
+  in the right-click menu stop both the microphone and Mac audio together; **Resume** picks
+  up again and **Stop &amp; transcribe** finishes from the paused state. The skipped stretch is
+  left out of both tracks, so the transcript has no gap and speaker labels stay aligned.
+  Every meeting timer now shows recorded time only, and the menu bar icon shows a pause
+  symbol while paused. The meeting shortcut still starts and stops.
+- Meeting transcripts can show when each turn started. Turn on **Show timestamps** in
+  **Settings &gt; Meetings &gt; Recording** (off by default) to get `[12:34] Speaker 1: …`.
+  It works without speaker labels too: the transcript is then split into paragraphs at
+  pauses, which now also happens with timestamps off. History and the meeting window can
+  export a meeting as SubRip (`.srt`) or WebVTT (`.vtt`) subtitles as well as plain text
+  and Markdown (new **Export transcript…** button in the meeting window). Hlas now asks
+  the speech engine for word timings on every meeting, so Whisper meetings take longer.
+- **Rename speakers.** Click a speaker's label ("Speaker 2:") in the meeting window's
+  Transcript tab or in History, type a name such as "Petra" and press Save; Reset brings
+  back "Me" or "Speaker N". All of that speaker's turns change together, and so do the
+  saved transcript (re-rendered with the current timestamp setting, so History's row
+  preview follows), the meeting notes (action owners, note text and the quoted source
+  excerpts) and the History record. Notes still being written when you rename are updated
+  when they arrive. Names apply to that meeting only, and a name another speaker already
+  has is refused.
+
+**Files**
+- **Transcribe audio and video files.** Drop a file on the menu bar icon or into the open
+  popover, or choose **Transcribe File…** in the right-click menu. WAV, AIFF, CAF, M4A, MP3,
+  FLAC, MOV, MP4 and M4V files up to 3 hours are decoded and transcribed on your Mac with
+  the selected local engine, exactly like a recorded meeting: speaker labels (without
+  "Me"), timestamps, subtitle export and meeting notes all apply. The meeting window shows
+  **Preparing audio…** with a progress bar while the file is decoded. The result is saved
+  to History with a **File** badge and the file name as its title; History's filter gains
+  **File**, and **Export…** suggests the file name. The file is only read, never changed or
+  deleted. A file is refused while a meeting records or is being transcribed, or while you
+  dictate, and the popover says why; if transcription fails, **Retry** decodes the file
+  again. Both channels of a stereo file are kept, so an interview recorded with one voice
+  per channel loses neither.
+
+**Meeting notes and questions**
+- **Ask the meeting a question.** A new **Ask** tab in the meeting window, and in History for
+  meetings and transcribed files: type a question and press **Ask** (⌘↩). The answer comes
+  from the transcript only, with the excerpts that support it under **Source excerpts**; a
+  question the transcript answers only partly is marked **Partly answered**, and one it does
+  not answer gets **Not in the transcript**. Long transcripts are answered section by
+  section, then combined. Uses the meeting notes endpoint (the question and the transcript
+  are sent to it when you ask); without one the tab offers **Configure meeting notes…**.
+  Questions and answers are saved with the History record (newest 50) and History search
+  finds them. The meeting notes request code now shares its HTTP transport with this
+  feature; notes requests are unchanged.
+
+**Privacy**
+- **Redact personal data before it leaves the Mac.** Settings › Meetings › Notes has a new
+  **Privacy** section: **Replace names, emails and phone numbers before sending** (off by
+  default) and a list of extra terms such as company or project names. When it is on, live
+  drafts, final notes and questions reach the notes endpoint with placeholders ("Person A",
+  "Term A", `email-1@example.invalid`, `+000 000 001`), the same throughout a meeting;
+  dates and amounts are kept, and so are "Me" and "Speaker N", while a name you gave a
+  speaker is replaced. Notes and answers show the original names again, and source
+  excerpts always come from the original transcript. **Preview redaction…** shows the
+  current or latest meeting transcript as the endpoint would see it. Best effort: names are
+  found with Apple's Natural Language framework (strongest in English), emails and phone
+  numbers by pattern. The debug log only records how many values were replaced.
+
+**Automation**
+- **Automation: Shortcuts actions and `hlas://` URLs.** The Shortcuts app lists Hlas
+  actions: Start, Stop (returns the transcript), Toggle and Cancel Dictation, Dictate with
+  Preset, Toggle / Pause / Resume Meeting Recording, Transcribe Audio File (file in, text
+  out) and Get Last Transcript; Spotlight and Siri know "Start dictation in Hlas" and similar
+  phrases. Raycast, Stream Deck, Keyboard Maestro and scripts can open
+  `hlas://dictation/start|stop|toggle|cancel`, `hlas://dictation/start?preset=&lt;name&gt;`,
+  `hlas://meeting/toggle|pause|resume`, `hlas://transcribe?file=&lt;path&gt;`, `hlas://paste-last`
+  and `hlas://settings/&lt;section&gt;`; Settings › App › **Automation** lists them with Copy
+  buttons. URL commands are off by default: turn them on with **Allow hlas:// URL
+  commands** in Settings › App › Automation. Any app or web page that opens a hlas:// link
+  could otherwise start or stop dictation and paste text; while the switch is off, Hlas
+  ignores every hlas:// URL. Shortcuts actions are not affected by the switch and always
+  work. Both run the same checks as the popover, refuse with a reason while Hlas is busy,
+  and do nothing until setup is complete. `transcribe` only reads audio or video files in
+  your home folder or under `/Volumes`.
+
+**Fixes**
+- Auto-detect with Whisper now actually detects the language. Until now Hlas never asked
+  Whisper to detect it, so Auto-detect quietly behaved like English and returned wrong
+  text for other languages. Choosing a specific language is unchanged.
+- Meeting recordings now mix both stereo channels of system audio into the transcript
+  track. Before, only the left channel was kept, so a voice a conference app panned to the
+  right could be missing.
+- Recorded audio read back from disk (dictation takes, the meeting microphone track, a
+  retried meeting) is now read to the end; a single read could stop a few hundredths of a
+  second short.</description>
+            <sparkle:version>33</sparkle:version>
+            <sparkle:shortVersionString>1.11.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://github.com/davidbudac/hlas-releases/releases/download/v1.11.0/Hlas.dmg" type="application/octet-stream" sparkle:edSignature="CphXHrC3uklKZe/v043AxvvCUhbek9M0Cuodu6qrDNSEDpwgYchbjk624KJTsfQKNzSq+sjPmzZzLtCF3KXMDA==" length="28446864" />
+        </item>
+        <item>
             <title>Version 1.10.1</title>
             <pubDate>Wed, 21 Oct 2026 16:41:50 +0000</pubDate>
             <description>
