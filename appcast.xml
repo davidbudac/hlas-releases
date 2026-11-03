@@ -6,6 +6,23 @@
         <description>Hlas app updates</description>
         <language>en</language>
         <item>
+            <title>Version 1.11.2</title>
+            <pubDate>Tue, 03 Nov 2026 10:25:40 +0000</pubDate>
+            <description>
+**Fixes**
+
+- **No more crashes when AirPods switch modes.** Hlas could crash when AirPods (or another
+  Bluetooth headset) switched between playback and headset-microphone mode, for example when
+  a call or another app started using their microphone, sometimes again right after
+  relaunching. The microphone is now recorded through Core Audio directly instead of
+  `AVAudioEngine`, whose internal device handling caused the crash. Microphone choice, the
+  level meter and "Microphone changed; try again" work as before.</description>
+            <sparkle:version>35</sparkle:version>
+            <sparkle:shortVersionString>1.11.2</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://github.com/davidbudac/hlas-releases/releases/download/v1.11.2/Hlas.dmg" type="application/octet-stream" sparkle:edSignature="PNryvUo4HtMeisYo7lfVvSLVFqQGWsRQon4UmppVdBhgJkQSNAkrA9kVF2adEETp42hRsL3/cY5VK70puBBYDg==" length="28506692" />
+        </item>
+        <item>
             <title>Version 1.11.1</title>
             <pubDate>Thu, 22 Oct 2026 20:51:48 +0000</pubDate>
             <description>
